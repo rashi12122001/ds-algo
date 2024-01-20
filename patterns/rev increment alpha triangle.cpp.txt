@@ -1,0 +1,20 @@
+// d
+// dc
+// dcb
+// dcba
+
+#include <iostream>
+using namespace std;
+int main() {
+    int d='d';
+  for(char a='a';a<=d;a++){
+    char n=d;
+      for(char c='a';c<=a;c++){
+          cout<<n;
+          n--;
+      }
+      cout<<endl;
+  }
+
+    return 0;
+}
