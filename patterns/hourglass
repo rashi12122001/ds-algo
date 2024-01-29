@@ -42,3 +42,33 @@ public class LogicalReasoning {
  *********
  */
  */
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+ int n;
+ cin>>n;
+ int space=0;
+ int star=n;
+		for(int i = 1 ; i <=n ; i++)
+		{
+		    for(int sp=0;sp<space;sp++){
+		        cout<<' ';
+		    }
+			for(int j = 1 ; j <=star ; j++)
+			{
+				cout<<'*';
+			}
+				if(i<(n+1)/2){
+				    star-=2;
+				    space++;
+				}
+				else{
+				    star+=2;
+				    space--;
+				}
+			
+			cout<<endl;
+		}
+}
