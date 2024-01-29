@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+ int star=1;
+ int n;
+ cin>>n;
+ int space=(n-1)/2;
+		for(int i = 1 ; i <=n ; i++)
+		{
+		    for(int sp=space;sp>=1;sp--){
+		        cout<<' ';
+		    }
+			for(int j = 1 ; j <=star ; j++)
+			{
+				cout<<'*';
+			}
+				if(i<(n+1)/2){
+				    star++;
+				    space--;
+				}
+				else{
+				    star--;
+				    space++;
+				}
+			
+			cout<<endl;
+		}
+}
+
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
