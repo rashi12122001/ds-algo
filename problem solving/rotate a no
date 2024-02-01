@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main() {
+    // Write C++ code here
+int n;
+cin>>n;
+int r;
+cin>>r;
+int temp=n;
+int count=0;
+int rotate=0;
+while(temp!=0){
+    temp=temp/10;
+    count++;
+}
+ // count is done
+ if(r<0){
+     r=count+r;
+ }
+ 
+ temp=n;
+ while(r!=0){
+     temp=temp%10;
+     n=n/10;
+     rotate=temp*pow(10,count-1)+n;
+     r=r-1;
+     temp=rotate;
+     n=rotate;
+ }
+ cout<<rotate;
+}
