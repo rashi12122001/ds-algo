@@ -19,7 +19,9 @@ while(temp!=0){
  if(r<0){
      r=count+r;
  }
- 
+ if(r>=count){
+     r=r-count;
+ }
  temp=n;
  while(r!=0){
      temp=temp%10;
