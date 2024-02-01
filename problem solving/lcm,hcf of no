@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+int n;
+cin>>n;
+int n2;
+cin>>n2;
+int rem=1;
+int i=n*n2;
+while(n%n2!=0){
+rem=n%n2;
+n=n2;
+n2=rem;
+    }
+cout<<"hcf is "<<n2<<endl;
+cout<<"lcm is "<<i/n2<<endl;
+    return 0;
+}
