@@ -1,0 +1,22 @@
+//switch place value with respect to face value
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main() {
+    // Write C++ code here
+int n;
+cin>>n;
+int temp=n;
+int inv=0;
+int count=0;
+while(n!=0){
+ n=n/10;
+ count++;
+ temp=temp%10;
+ inv=inv+count*pow(10,temp-1);
+ temp=n;
+}
+ 
+ cout<<"inv is "<<inv;
+    return 0;
+}
