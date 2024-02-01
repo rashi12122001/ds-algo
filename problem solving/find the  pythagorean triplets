@@ -1,0 +1,38 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+void chkhypo(int a,int b, int c){
+int hypo;
+if(a>b && a>c){
+    if (a*a==b*b+c*c){
+        cout<<"triplets"<<a<<" hypo";
+    }
+    else{
+        cout<<"not a triplet";
+    }
+}
+else if(b>a && b>c){
+    if (b*b==a*a+c*c){
+        cout<<"triplets"<<b<<" hypo";
+    }
+    else{
+        cout<<"not a triplet";
+    }
+}
+else{
+    if (c*c==b*b+a*a){
+        cout<<"triplets "<<c<<" hypo";
+    }
+    else{
+        cout<<"not a triplet";
+    }
+}
+
+}
+int main() {
+int a,b,c;
+cin>>a>>b>>c;
+chkhypo(a,b,c);
+    return 0;
+}
