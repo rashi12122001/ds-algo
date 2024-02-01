@@ -1,0 +1,19 @@
+https://leetcode.com/problems/two-sum/submissions/558783778/
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target)
+    { vector<int> array;
+        for(int i=0;i<nums.size();i++)
+        {
+           for(int j=0;j<nums.size() && j!=i;j++)
+           {
+               if(target-nums[i]==nums[j])
+               {
+                  array={i,j};
+               }
+           }
+        }
+     return array;
+        
+    }
+};
