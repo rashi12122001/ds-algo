@@ -82,3 +82,51 @@ int main(){
 	}
 	return 0;
 }
+
+
+
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+ int n,m;
+ cin>>n;
+ int arr[n];
+    cout<<"hi"<<endl;
+ for(int i=0;i<n;i++){
+     cin>>arr[i];
+ }
+ cout<<"enter 2nd "<<endl;
+cin>>m;
+int arr1[m];
+ for(int j=0;j<m;j++){
+     cin>>arr1[j];
+ }
+ int large=(n>m)?n:m;
+ int sum[large];
+ int k=n-1;
+ int l=m-1;
+ int carry=0;
+ for(int i=large-1;i>=0;i--){
+     sum[i]=carry;
+  if(k>=0){
+      sum[i]=sum[i]+arr[k];
+  }
+  if(l>=0){
+      sum[i]=sum[i]+arr1[l];
+  }
+     carry=sum[i]/10;
+     sum[i]=sum[i]%10;
+     k--;
+     l--;
+ }
+ if(carry!=0){
+     cout<<carry;
+ }
+ for(int i=0;i<large;i++){
+     cout<<sum[i]<<" ";
+ }
+ 
+    return 0;
+}
