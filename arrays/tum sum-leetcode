@@ -1,4 +1,4 @@
-https://leetcode.com/problems/two-sum/submissions/558783778/
+brute force:-
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target)
@@ -17,3 +17,4 @@ public:
         
     }
 };
+//for the optimized we can use hash maps or maps of stl lib 
