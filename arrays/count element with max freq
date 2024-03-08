@@ -12,3 +12,54 @@ public:
         return ans;
     }
 };
+///my code
+#include <iostream>
+#include <vector>
+#include <algorithm> // for sort
+#include <unordered_map>
+
+
+class Solution {
+public:
+    int maxFrequencyElements(std::vector<int>& nums) {
+        std::vector<int> counter(100, 0);
+        int count = 1;
+        int ans = 0;
+        int maxCount = 0;
+
+        for (int i = 0; i < nums.size(); i++) {
+            int d = nums[i];
+            if (counter[d] == 0) {
+                count = 1;
+                counter[d] = count;
+            } else {
+                count++;
+                counter[d] = count;
+            }
+            if (count > maxCount) {
+                maxCount = count;
+            }
+        }
+
+       
+
+        sort(nums.begin(), nums.end());
+
+        for (int i : nums){
+            if (counter[i] == maxCount) {
+                ans++;
+            }
+        }
+        return ans*maxCount ;
+    }
+};
+
+int main() {
+    // Example usage
+    std::vector<int> nums = {19,19,19,20,19,8,19};
+    Solution solution;
+    int result = solution.maxFrequencyElements(nums);
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;
+}
