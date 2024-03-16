@@ -16,4 +16,29 @@
 // 4
 // Sample Output
 // 7
+#include <iostream>
+using namespace std;
+// iterative code with use of dp but Memorization is used here
+int csTab(int n){
+    // write your code here
+    int dp[n+1];
+    
+    dp[0]=1;
+    for(int i=1;i<=n;i++){
+        if(i==1){
+            dp[i]=dp[i-1];
+        }else if(i==2){
+            dp[i]= dp[i-1]+dp[i-2];
+        }else{
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+    }
+    return dp[n];
 
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<csTab(n)<<endl;
+}
